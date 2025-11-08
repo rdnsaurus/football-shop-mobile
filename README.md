@@ -1,25 +1,14 @@
-# Tugas Individu 7
-29 Oktober 2025, Introduction To Flutter
+# Tugas Individu 8
+5 November 2025, Routing And Form Flutter
 
-## Widget Tree Pada Flutter
-Widget Tree pada Flutter menjelaskan jika tiap app punya widget utamanya (sebagai contoh di main.dart) yang disebut sebagai parent, lalu pada widget utama tersebut mempunyai widget cabang yang disebut sebagai child dan berada di dalam widget parentnya. Singkatnya, widget tree punya hubungan parent-child untuk mendefiniskan objek mana yang harus terimplement didalamnya.
+## Navigator .push() dan .pushReplacement()
+Navigator adalah sebuah class yang berguna untuk routing antar widget dan bekerja seperti stack. Method .push() dan .pushReplacement() pada navigator berguna untuk membuat routing ke suatu widget/page lainnya. Perbedaanya terletak pada kondisi widget lama (sebelum di push), pada .push() widget lama masih tampil (seperti .add() pada stack) sedangkan pada .pushReplacement() widget yang lama diganti dengan widget yang ingin ditampilkan (seperti .pop() lalu .add() pada stack()).
 
-## Football_Shop Widget
-Ada dua widget, yang pertama ada di main.dart dengan return value MaterialApp digunakan untuk menginisiasi home site dari suatu app, yang kedua ada di menu.dart dengan return value Material digunakan untuk membentuk sebuah widget-children dari main.dart (yang sudah diimport) dengan beberapa elemen stylesheet berupa tombol berwarna dan snackbar sebagai responnya.
+## Hierarchy Widget (Scaffold, AppBar, Drawer)
+Hierarchy widget digunakan untuk membangun struktur halaman yang konsisten di seluruh aplikasi. Pemanfaatan hierarki ini membantu menciptakan pola tampilan yang seragam, mudah dipahami pengguna, dan efisien dalam pengembangan. Scaffold menjadi kerangka utama setiap halaman, AppBar menampilkan judul dan navigasi (bar seperti biasa), sedangkan Drawer menyediakan menu navigasi yang sama di semua halaman. Dengan begitu, tampilan dan pengalaman pengguna menjadi seragam dan mudah digunakan.
 
-## MaterialApp Widget
-MaterialApp adalah sebuah class yang berisi banyak atribut/method untuk mengkustomisasi app. MaterialApp digunakan sebagai widget root karena method/atribut dari MaterialApp memang digunakan sebagai inisiator dari sebuah app (seperti home, route, dan lainnya).
+## Layout Widget (Padding, SingleChildScrollView, ListView)
+Widget seperti Padding, SingleChildScrollView, dan ListView membantu menjaga tampilan form agar tetap rapi dan responsif. Padding memberi jarak antar elemen, SingleChildScrollView mencegah overflow dengan memungkinkan scroll, dan ListView memudahkan penataan banyak elemen input secara efisien. Contohnya, pada halaman form terdapat SingleChildScrollView dengan Padding di dalamnya agar form tetap bisa discroll pada layar kecil.
 
-## Stateless/Stateful Widget
-Sebuah widget yang dikatakan stateful, ketika widget tersebut memiliki aksi nyata saat dilakukan sebuah event dari User dan terdapat fungsi yang merespons event tersebut seperti tombol increment di awal inisiasi flutter. Demikian stateless berupa kebalikan dari stateful.
-
-Kapan kita memakai widget yang stateful? saat kita ingin memberikan interaksi pada user, jika tidak perlu cukup stateless saja.
-
-## BuildContext
-BuildContext adalah sebuah abstract class yang digunakan untuk menghandle lokasi dari suatu widget pada widget tree. BuildContext penting sebagai kerangka dari suatu widget, dengan method yang diberikan-diimplementasikan widget yang dibentuk akan terstruktur.
-
-## Hot Reload/Restart
-Hot Reload adalah suatu command untuk mengaplikasikan perubahan kode dengan menjaga state dari app yang sudah di run, sedangkan Hot Restart tidak menjaga state tersebut. Dengan demikian, perbedaan ada di runtime dan state akhir app.
-
-## Navigasi Pindah Layar Pada Flutter
-Navigasi dilakukan dengan menggunakan class Navigator dan Route. Navigator.push() digunakan untuk berpindah ke halaman baru (menambahkan route ke stack), sedangkan Navigator.pop() digunakan untuk kembali ke halaman sebelumnya (menghapus route dari stack). Dengan demikian, navigasi pada Flutter bekerja seperti tumpukan (stack) di mana halaman yang terakhir dibuka akan berada di atas dan dapat ditutup untuk kembali ke halaman sebelumnya.
+## Konsistensi Warna Tema
+Pada main app, inisiasikan warna primary/secondary/n-ary pada theme lalu untuk memakai warna yang sudah diinitiate set color sebagai Theme.of(context).colorScheme.X (x: primary/n-ary dan lainnya). Dengan demikian, warna pada widget akan konsisten sesuai tema yang diberikan.
