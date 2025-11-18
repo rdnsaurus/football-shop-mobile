@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:football_shop/screen/menu.dart';
 import 'package:football_shop/screen/itemslist_form.dart';
+import 'package:football_shop/screen/item_entry_list.dart';
 
 class LeftDrawer extends StatelessWidget {
   const LeftDrawer({super.key});
@@ -54,7 +55,7 @@ class LeftDrawer extends StatelessWidget {
           ),
           ListTile(
               leading: const Icon(Icons.post_add),
-              title: const Text('Create Products'),
+              title: const Text('Create Items'),
               // Bagian redirection ke ItemsFormPage
               onTap: () {
                 Navigator.pushReplacement(
@@ -63,7 +64,18 @@ class LeftDrawer extends StatelessWidget {
                     builder: (context) => ItemsFormPage(),
                   ));
               },
-          )
+          ),
+          ListTile(
+            leading: const Icon(Icons.add_reaction_rounded),
+            title: const Text('Item List'),
+            onTap: () {
+                // Route to item list page
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const ItemEntryListPage()),
+                );
+            },
+          ),
         ],
       ),
     );

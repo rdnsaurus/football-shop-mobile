@@ -9,9 +9,9 @@ class MyHomePage extends StatelessWidget {
   final String title= 'Tugas Individu PBP 25/26';
 
   final List<ItemHomepage> items = [
-  ItemHomepage("All Products", Icons.shop, Color.fromARGB(255, 255, 7, 7)),
-  ItemHomepage("My Products", Icons.sentiment_satisfied_outlined, Color.fromARGB(255, 6, 65, 6)),
-  ItemHomepage("Create Product", Icons.add_business, Color.fromARGB(255, 7, 7, 255)),
+  ItemHomepage("All Items", Icons.shop, Color.fromARGB(255, 255, 7, 7)),
+  ItemHomepage("My Items", Icons.sentiment_satisfied_outlined, Color.fromARGB(255, 6, 65, 6)),
+  ItemHomepage("Create Item", Icons.add_business, Color.fromARGB(255, 7, 7, 255)),
   ];
 
   @override
